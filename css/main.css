@@ -1,15 +1,63 @@
 #main-body {
   background-color: #c7c7c7;
 }
+#main-body #main-container {
+  /******** SLIDER => *********/
+}
 #main-body #main-container .navbar {
-  background-color: #ec5252;
+  background: #ec5252;
+  min-height: 65px;
   margin-bottom: 0;
 }
-#main-body #main-container .background--image {
-  background-image: url("../images/image2.jpg");
-  width: 100vw;
-  height: 100vh;
-  max-width: 100%;
+#main-body #main-container .full-screen {
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+}
+#main-body #main-container .dropdown-menu a:hover,
+#main-body #main-container .dropdown-menu a:focus,
+#main-body #main-container .dropdown-menu a:active {
+  background-color: #ec5252;
+}
+#main-body #main-container .carousel-inner .item {
+  height: 90vh !important;
+  margin-top: 10vh;
+}
+#main-body #main-container .carousel-inner .btn {
+  z-index: 2;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  background-color: #ec5252;
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.5);
+  font-size: 110%;
+  text-shadow: 0px 3px 0.5px rgba(0, 0, 0, 0.7);
+}
+#main-body #main-container .carousel-inner .btn:active {
+  transition: all 0s ease-in-out;
+}
+#main-body #main-container .glyphicon-chevron-left,
+#main-body #main-container .glyphicon-chevron-right {
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: .8em;
+  text-align: center;
+  padding-top: 10px;
+  color: #666;
+  background-color: white;
+  box-shadow: 1px 3px 15px 0px rgba(0, 0, 0, 0.5);
+}
+#main-body #main-container .glyphicon-chevron-left {
+  position: relative;
+  left: -30%;
+}
+#main-body #main-container .glyphicon-chevron-right {
+  position: relative;
+  right: -30%;
 }

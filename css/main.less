@@ -5,18 +5,68 @@
     background-color: @background;
     #main-container {
         .navbar {
-            background-color: @theme;
-
+            background: @theme;
+            min-height: 65px;
             margin-bottom: 0;
         }
-        .background--image {
-            background-image: url("../images/image2.jpg");
-            width: 100vw;
-            height: 100vh;
-            max-width: 100%;
+        /******** SLIDER => *********/
+          .full-screen {
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+          }
+
+        .dropdown-menu {
+            a:hover, a:focus, a:active {
+                background-color: @theme;
+            }
         }
+        .carousel-inner {
+            .item {
+                height: 90vh !important;
+                margin-top: 10vh;
+            }
+            .btn {
+                z-index: 2;
+                position: absolute;
+                top: 80%;
+                left: 50%;
+                transform:translate(-50%, -50%);
+                width: 150px;
+                margin: 0 auto;
+                margin-bottom: 25px;
+                background-color: @theme;
+                box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.5);
+                font-size: 110%;
+                text-shadow: 0px 3px .5px rgba(0, 0, 0, 0.7);
+            }
+            .btn:active {
+                transition: all 0s ease-in-out;
+            }
+        }
+        .glyphicon-chevron-left, .glyphicon-chevron-right {
+            border: 2px solid white;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: .8em;
+            text-align: center;
+            padding-top: 10px;
+            color: #666;
+            background-color: white;
+            box-shadow: 1px 3px 15px 0px rgba(0, 0, 0, 0.5);
+        }
+        .glyphicon-chevron-left {
+            position: relative;
+            left: -30%;
+        }
+        .glyphicon-chevron-right {
+            position: relative;
+            right: -30%;
+        }
+        
+        
+        
+
     }
-    
 }
