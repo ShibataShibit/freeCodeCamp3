@@ -8,19 +8,43 @@
             background: @theme;
             min-height: 65px;
             margin-bottom: 0;
+
+            /*** Animate burger icon ***/
+            // .navbar-toggle .icon-bar:nth-of-type(2) {
+            //   top: 1px;
+            // }
+            // avbar-toggle .icon-bar:nth-of-type(3) {
+            //   top: 2px;
+            // }
+            .navbar-toggle .icon-bar {
+                position: relative;
+              transition: all 500ms ease-in-out;
+            }
+            .navbar-toggle.active .icon-bar:nth-of-type(2) {
+                top: 6px;
+              transform: rotate(45deg);
+            }
+            .navbar-toggle.active .icon-bar:nth-of-type(3) {
+                color: transparent;
+            }
+            .navbar-toggle.active .icon-bar:nth-of-type(4) {
+                top: -6px;
+                transform: rotate(-45deg);
+            } /** END animate burger icon **/
+
+            .dropdown-menu {
+                a:hover, a:focus, a:active {
+                    background-color: @theme;
+                }
+            }
         }
         /******** SLIDER => *********/
-          .full-screen {
+        .full-screen {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-          }
-
-        .dropdown-menu {
-            a:hover, a:focus, a:active {
-                background-color: @theme;
-            }
         }
+
         .carousel-inner {
             .item {
                 height: 90vh !important;
@@ -36,7 +60,7 @@
                 margin: 0 auto;
                 margin-bottom: 25px;
                 background-color: @theme;
-                box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.2);
                 font-size: 110%;
                 text-shadow: 0px 3px .5px rgba(0, 0, 0, 0.7);
             }
@@ -54,7 +78,8 @@
             padding-top: 10px;
             color: #666;
             background-color: white;
-            box-shadow: 1px 3px 15px 0px rgba(0, 0, 0, 0.5);
+            // box-shadow: 1px 3px 15px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.2)
         }
         .glyphicon-chevron-left {
             position: relative;
@@ -64,7 +89,22 @@
             position: relative;
             right: -30%;
         }
-        
+        .product-container {
+            position: relative;
+            left: 10%;
+            background-color: white;
+            width: 150px;
+            height: 200px;
+        }
+        .stretched-span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: green;
+        }
         
         
 

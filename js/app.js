@@ -23,3 +23,9 @@ $('.carousel').carousel({
   interval: 7000,
   pause: "false"
 });
+
+$(document).ready(function () {
+  $(".navbar-toggle").on("click", function () {
+      $(this).toggleClass("active");
+  });
+});
