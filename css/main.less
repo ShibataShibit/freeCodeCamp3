@@ -1,5 +1,14 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 @theme: rgba(236, 82, 82, 1.0);
 @background: rgba(199, 199, 199, 1.0);
+@product-width: 250px;
+@product-height: 400px;
+@price-color: rgb(7, 146, 192);
 
 #main-body {
     background-color: @background;
@@ -38,73 +47,137 @@
                 }
             }
         }
+
         /******** SLIDER => *********/
-        .full-screen {
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        #mycarousel {
+
+            .full-screen {
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            .carousel-indicators {
+                li {
+                    width: 7px;
+                    height: 7px;
+                    border-radius: 50%;
+                    border-color: gray;
+                    background-color: #f2f2f2;
+                }
+                .active {
+                    width: 8px;
+                    height: 8px;
+                }
+            }
+            .carousel-control {
+                width: 10%;
+            }
+
+            .carousel-inner {
+                .item {
+                    height: 90vh !important;
+                    margin-top: 10vh;
+                }
+                .btn {
+                    z-index: 2;
+                    position: absolute;
+                    top: 82%;
+                    left: 50%;
+                    transform:translate(-50%, -50%);
+                    width: 150px;
+                    margin: 0 auto;
+                    margin-bottom: 25px;
+                    background-color: @theme;
+                    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.2);
+                    font-size: 110%;
+                    text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.7);
+                }
+                .btn:active {
+                    transition: all 0s ease-in-out;
+                }
+            }
+            .glyphicon-chevron-left, .glyphicon-chevron-right {
+                border: 2px solid white;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                font-size: .8em;
+                text-align: center;
+                padding-top: 10px;
+                color: #666;
+                background-color: white;
+                font-weight: 100px;
+                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.2)
+            }
+        }
+        
+        .info-container {
+
         }
 
-        .carousel-inner {
-            .item {
-                height: 90vh !important;
-                margin-top: 10vh;
-            }
-            .btn {
-                z-index: 2;
-                position: absolute;
-                top: 80%;
-                left: 50%;
-                transform:translate(-50%, -50%);
-                width: 150px;
-                margin: 0 auto;
-                margin-bottom: 25px;
-                background-color: @theme;
-                box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.2);
-                font-size: 110%;
-                text-shadow: 0px 3px .5px rgba(0, 0, 0, 0.7);
-            }
-            .btn:active {
-                transition: all 0s ease-in-out;
-            }
-        }
-        .glyphicon-chevron-left, .glyphicon-chevron-right {
-            border: 2px solid white;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            font-size: .8em;
-            text-align: center;
-            padding-top: 10px;
-            color: #666;
-            background-color: white;
-            // box-shadow: 1px 3px 15px 0px rgba(0, 0, 0, 0.5);
-            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.2)
-        }
-        .glyphicon-chevron-left {
-            position: relative;
-            left: -30%;
-        }
-        .glyphicon-chevron-right {
-            position: relative;
-            right: -30%;
-        }
         .product-container {
-            position: relative;
-            left: 10%;
-            background-color: white;
-            width: 150px;
-            height: 200px;
-        }
-        .stretched-span {
-            position: absolute;
-            top: 0;
-            left: 0;
             width: 100%;
-            height: 100%;
-            z-index: 1;
-            background-color: green;
-        }
+            max-width: 100%;
+            padding: 1%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: flex-start;
+
+            .product-div {
+                background-color: white;
+                width: @product-width;
+                height: @product-height;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                transition: all .2s ease-in-out;
+                margin-top: 5px;
+                margin-bottom: 10px;
+                border-radius: 3px;
+                a, a:hover, a:visited, a.focus {
+                    text-decoration: none;
+                    color: black;
+                }
+                img {
+                    position: relative;
+                    top: 5px;
+                    left: 50%;
+                    transform:translateX(-50%);
+                    max-width: 95%;
+                    max-height: 70%;
+                }
+                .product-name {
+                    color: #333;
+                    font-weight:500;
+                    font-size: 1.5rem;
+                    text-align: center;
+                    width: 95%;
+                    margin: 0 auto;
+                }
+                hr {
+                    border-color: red;
+                    max-width: 100%;
+                    margin: 5px;
+                }
+                .product-price {
+                    color: @price-color;
+                    font-weight: 500;
+                    font-size: 1.7rem;
+                    text-align: center;
+                    border: 1px solid @price-color;
+                    width: 40%;
+                    margin: 0 auto;
+                    padding: 3px;
+                    border-radius: 5px;
+                }
+            }
+            .product-div:hover {
+                transition: all .2s ease-in-out;
+                box-shadow: 2px 7px 25px 2px rgba(0, 0, 0, 0.2);
+            }
+        } /*** END product-container ***/
+        
+
         
         
 
