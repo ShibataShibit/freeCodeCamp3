@@ -9,8 +9,11 @@
 @product-width: 250px;
 @product-height: 400px;
 @price-color: rgb(7, 146, 192);
+@info-background: #f2f2f2;
+@description: rgb(102, 102, 102);
 
 #main-body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: @background;
     #main-container {
         .navbar {
@@ -91,7 +94,7 @@
                     background-color: @theme;
                     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.2);
                     font-size: 110%;
-                    text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.7);
+                    text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.7);
                 }
                 .btn:active {
                     transition: all 0s ease-in-out;
@@ -112,9 +115,59 @@
             }
         }
         
-        .info-container {
-
+        @media(min-width: 768px) {
+            .info-container {
+                display: flex;
+                justify-content: space-around;
+            }
         }
+        /*** info-container ***/
+        .info-container {
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: 400;
+            padding: 3% 0;
+            background-color: @info-background;
+            margin-bottom: 50px;
+
+            .info-section {
+                .fa {
+                    font-size: 2em;
+                    text-decoration: none;
+                    transition: all .3s ease-in-out;
+                }
+                .fa:hover {
+                    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+                    transition: all .3s ease-in-out;
+                }
+                .fa-money {
+                    color: green;
+                }
+                .fa-handshake-o {
+                    color: orangered;
+                }
+                .fa-truck {
+                    color:  dodgerblue;
+                }
+                .info-headline {
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-weight: 500;
+                    font-size: 1.3em;
+                    text-transform: uppercase;
+                }
+                p {
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 1.1em;
+                    text-align: justify;
+                    color: @description;
+                }
+
+                flex-basis: 30%;
+                height: auto;
+                border: 2px 0px solid @theme;
+                padding: 20px;
+            }
+        } /*** END of info-container ***/
 
         .product-container {
             width: 100%;

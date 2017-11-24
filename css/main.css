@@ -4,10 +4,13 @@
   box-sizing: border-box;
 }
 #main-body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #c7c7c7;
 }
 #main-body #main-container {
   /******** SLIDER => *********/
+  /*** info-container ***/
+  /*** END of info-container ***/
   /*** END product-container ***/
 }
 #main-body #main-container .navbar {
@@ -72,7 +75,7 @@
   background-color: #ec5252;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.2);
   font-size: 110%;
-  text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.7);
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.7);
 }
 #main-body #main-container #mycarousel .carousel-inner .btn:active {
   transition: all 0s ease-in-out;
@@ -90,6 +93,56 @@
   background-color: white;
   font-weight: 100px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 768px) {
+  #main-body #main-container .info-container {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+#main-body #main-container .info-container {
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: 400;
+  padding: 3% 0;
+  background-color: #f2f2f2;
+  margin-bottom: 50px;
+}
+#main-body #main-container .info-container .info-section {
+  flex-basis: 30%;
+  height: auto;
+  border: 2px 0px solid #ec5252;
+  padding: 20px;
+}
+#main-body #main-container .info-container .info-section .fa {
+  font-size: 2em;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+#main-body #main-container .info-container .info-section .fa:hover {
+  text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease-in-out;
+}
+#main-body #main-container .info-container .info-section .fa-money {
+  color: green;
+}
+#main-body #main-container .info-container .info-section .fa-handshake-o {
+  color: orangered;
+}
+#main-body #main-container .info-container .info-section .fa-truck {
+  color: dodgerblue;
+}
+#main-body #main-container .info-container .info-section .info-headline {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+#main-body #main-container .info-container .info-section p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1em;
+  text-align: justify;
+  color: #666666;
 }
 #main-body #main-container .product-container {
   width: 100%;
