@@ -5,7 +5,7 @@
 }
 
 @theme: rgba(236, 82, 82, 1.0);
-@background: rgba(199, 199, 199, 1.0);
+@background: #777;//rgb(240, 235, 235);
 @product-width: 250px;
 @product-height: 400px;
 @price-color: rgb(7, 146, 192);
@@ -108,7 +108,7 @@
                 font-size: .8em;
                 text-align: center;
                 padding-top: 10px;
-                color: red;
+                color: @theme;
                 background-color: white;
                 font-weight: 100px;
                 box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.2);
@@ -269,6 +269,7 @@
                     .fa {
                         margin-left: 5px;
                         color: white;
+                        z-index: 1;
                     }
                 }
             }

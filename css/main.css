@@ -5,7 +5,7 @@
 }
 #main-body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #c7c7c7;
+  background-color: #777;
 }
 #main-body #main-container {
   /******** SLIDER => *********/
@@ -89,7 +89,7 @@
   font-size: .8em;
   text-align: center;
   padding-top: 10px;
-  color: red;
+  color: #ec5252;
   background-color: white;
   font-weight: 100px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.2);
@@ -248,6 +248,7 @@
 #main-body #main-container .product-container .product-div .btn .fa {
   margin-left: 5px;
   color: white;
+  z-index: 1;
 }
 /***** IMAGE 3D X AXIS FLIP AND CHANGE TO ANOTHER IMAGE *****/
 /*
