@@ -4,12 +4,14 @@
     box-sizing: border-box;
 }
 
-@theme: #fb6964; //rgba(236, 82, 82, 1.0);//#fb6964;
-@background: rgb(246, 232, 238);
+@theme: rgba(30, 144, 255, 1.0);//rgba(236, 82, 82, 1.0);//#fb6964;
+@nav-background: rgba(30, 144, 255, 0.7);
+@background:#ddd;
 @product-width: 250px;
 @product-height: 400px;
 @price-color: rgb(7, 146, 192);
-@info-background: #ffffff;
+@info-background: @background;
+@product-background:white;
 @description: rgb(102, 102, 102);
 
 #main-body {
@@ -17,9 +19,12 @@
     background-color: @background;
     #main-container {
         .navbar {
-            background: @theme;
+            background-color: @theme;
+            opacity: 7%;
+            box-shadow: inset 0px 0px 20px 3px rgba(255, 255, 255, 0.4);
             min-height: 65px;
             margin-bottom: 0;
+            // text-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 1);
 
             /*** Animate burger icon ***/
             
@@ -43,6 +48,9 @@
                 a:hover, a:focus, a:active {
                     background-color: @theme;
                 }
+            }
+            li {
+                font-size: 4em;
             }
         }
 
@@ -120,6 +128,7 @@
         }
         /*** info-container ***/
         .info-container {
+            
             margin: 0 18px;
             margin-top: 18px;
             text-align: center;
@@ -127,9 +136,11 @@
             font-weight: 400;
             padding: 3% 0;
             background-color: @info-background;
-            // margin-bottom: 10px;
+            height: auto;
 
             .info-section {
+                background-color: white;
+                box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
                 a {
                     text-decoration: underline;
                     color: dodgerblue;
@@ -141,11 +152,10 @@
                     text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.4);
                 }
                 .fa:hover {
-                    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
                     transition: all .3s ease-in-out;
                 }
                 .fa-money {
-                    color: green;
+                    color: #27ae60;
                 }
                 .fa-handshake-o {
                     color: darkorchid;
@@ -184,7 +194,7 @@
 
             .product-div {
                 position: relative;
-                background-color: white;
+                background-color: @product-background;
                 width: @product-width;
                 height: @product-height;
                 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
